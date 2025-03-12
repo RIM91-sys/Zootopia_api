@@ -1,17 +1,5 @@
-import requests
+import data_fetcher
 
-API_KEY = "5cIMwGuI2ftsaF/83xkd6w==UryyKLg1DKEWpbZn"
-API_URL = "https://api.api-ninjas.com/v1/animals"
-
-def fetch_animal_data(animal_name):
-    """Fetch animal information from the API."""
-    headers = {"X-Api-Key": API_KEY}
-    response = requests.get(f"{API_URL}?name={animal_name}", headers=headers)
-
-    if response.status_code == requests.codes.ok:
-        return response.json()
-    else:
-        return None  # Handle errors later
 
 def generate_html(animal_name, animal_data):
     """Generate an HTML file based on the API response."""
@@ -46,8 +34,9 @@ def generate_html(animal_name, animal_data):
 # Main Program
 def main():
     animal_name = input("Enter a name of an animal: ").strip()
-    animal_data = fetch_animal_data(animal_name)
+    animal_data = data_fetcher.fetch_data(animal_name)  # Now using the fetcher module
     generate_html(animal_name, animal_data)
+
 
 if __name__ == "__main__":
     main()
