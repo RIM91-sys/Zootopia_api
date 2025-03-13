@@ -10,9 +10,9 @@ for anyone who wants quick insights into various topics.
 - Simple and modular architecture for easy customization.
 
 ## Installation
-To install this project, simply clone the repository and install the dependencies in requirements.txt using `pip`
-To install this project, clone the repository and navigate into it:
-git clone https://github.com/RIM91-sys/Zootopia_api
+To install this project:
+Clone the repository and navigate into it: git clone https://github.com/RIM91-sys/Zootopia_api
+Install the dependencies in requirements.txt using `pip`
 
 ## Usage
 
